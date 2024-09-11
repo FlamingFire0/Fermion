@@ -1,5 +1,10 @@
 const { app, BrowserWindow } = require("electron");
+const path = require("path");
 
+const devServer = require("electron-reload");
+devServer(path.join(__dirname, ".."), {
+  electron: path.join(__dirname, "node_modules", ".bin", "electron"),
+});
 
 
 app.on("window-all-closed", () => {
