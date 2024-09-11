@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "electron": "^32.0.2"
+  },
+  "name": "fermion",
+  "version": "1.0.0",
+  "description": "A simple text editor / IDE",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "FlamingFire0 (Flamingo)",
+  "license": "ISC"
+}

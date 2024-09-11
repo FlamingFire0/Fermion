@@ -1,0 +1,6 @@
+winget install -e --id OpenJS.NodeJS
+
+
+cd into the project
+
+npm install electron@v32.0.2
