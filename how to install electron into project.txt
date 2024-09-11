@@ -3,4 +3,8 @@ winget install -e --id OpenJS.NodeJS
 
 cd into the project
 
-npm install electron@v32.0.2
+Expand-Archive ./node_modules/electron/dist/electron.zip ./node_modules/electron/dist/
+
+or 
+
+Compress-Archive ./node_modules/electron/dist/electron.exe ./node_modules/electron/dist/electron.zip
