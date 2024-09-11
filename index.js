@@ -1,30 +1,39 @@
-const { app, BrowserWindow } = require("electron");
-const path = require("path");
+const { app, BrowserWindow } = require("electron")
 
-const devServer = require("electron-reload");
+
+const devServer = require("electron-reload")
+const path = require("path")
+
+// Use a precompiled Electron binary if possible
+const electronPath = path.join(__dirname, "node_modules", ".bin", "electron")
+
 devServer(path.join(__dirname, ".."), {
-  electron: path.join(__dirname, "node_modules", ".bin", "electron"),
-});
+  electron: electronPath,
+  // Exclude unnecessary files
+  excludes: ["node_modules/**/*", "dist/**/*", "temp/**/*"],
+  // Watch only necessary files
+  watch: ["src/**/*", "public/**/*"],
+  // Enable caching with appropriate settings
+  cache: true,
+  cacheMaxAge: 3600000, // 1 hour
+})
 
 
 app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") app.quit();
-});
+  if (process.platform !== "darwin") app.quit()
+})
 
-app.whenReady().then(() => {
-  createWindow();
+app.on("ready", main)
 
-  app.on("activate", () => {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow();
-  });
-});
+function main() {
+  
+  const window = new BrowserWindow({ width: 800, height: 600,})
 
-const createWindow = () => {
-  const win = new BrowserWindow({
-    width: 800,
-    height: 600,
-  });
+  window.
 
-  win.loadFile("index.html");
-};
+  window.menuBarVisible = false
+  window.loadFile("index.html")
+
+
+}
 

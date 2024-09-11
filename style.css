@@ -1,0 +1,12 @@
+textarea.main {
+    width: 100%;
+    height: 100%;
+    border: none;  /*Remove border for a cleaner look */
+    resize: none; /* Prevent resizing by the user */
+    /*padding: 10px; /* Add padding if desired */
+}
+
+div.main {
+    width: 100%;
+    height: 100%;
+}
