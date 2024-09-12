@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>Fermion</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
     <div class="container">
 
-      <div class="titleBar titleBarStyle">
+      <div class="titleBar titleBarStyle draggable">
         
-        <div class="windowTitle preventSelect draggable"> FERMION </div>
+        <div class="windowTitle preventSelect"> FERMION </div>
 
         <div class="windowControls windowControlsStyle">
 
-          <button id="minimize">🟡</button>
           <button id="maximize">🟢</button>
+          <button id="minimize">🟡</button>
           <button id="close">🔴</button>          
           
 
@@ -34,6 +34,6 @@
 
     </div>
 
-    <script src="titleBar.js"></script>
+    <script src="js/titleBar.js"></script>
   </body>
 </html>
