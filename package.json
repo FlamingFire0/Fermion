@@ -5,8 +5,7 @@
   "main": "index.js",
   "devDependencies": {
     "@electron/remote": "^2.1.2",
-    "electron": "^32.0.2",
-    "electron-reload": "^2.0.0-alpha.1"
+    "electron": "^32.0.2"
   },
   "scripts": {
     "test": "electron ."
