@@ -1,0 +1,28 @@
+textArea.codingTextArea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+
+    position: relative;
+
+
+    background-color: #151515;
+    color: white;
+    font-family: jetbrains mono;
+}
+
+
+
+.codingScreen {
+
+    
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+

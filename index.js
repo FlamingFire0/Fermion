@@ -1,4 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
+const fs = require("fs");
+
 
 
 
@@ -19,15 +21,24 @@ app.on("ready", () => {
     frame: false,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
     },
+    icon: "img/fermion.svg",
   });
+
+
 
 
   win.loadFile("index.html");
 
-  ipcMain.on("minimize-app", () => {win.minimize()});
-  ipcMain.on("maximize-app", () => {win.maximize()});
   ipcMain.on("close-app", () => {win.close()});
+  ipcMain.on("minimize-app", () => {win.minimize()});
+  ipcMain.on("maximize-app", () => {
+    if (win.isMaximized()) {
+      win.restore()
+    } else {
+      win.maximize()
+    }
+  });
 })
 

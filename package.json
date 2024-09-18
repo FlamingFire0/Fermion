@@ -9,7 +9,7 @@
   "author": "FlamingFire0 (Flamingo)",
   "license": "ISC",
   "dependencies": {
-    "electron": "^32.0.2",
-    "@electron/remote": "^2.1.2"
+    "@electron/remote": "^2.1.2",
+    "electron": "^32.0.2"
   }
 }
