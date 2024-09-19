@@ -1,16 +1,18 @@
 const { ipcRenderer } = require("electron")
 
+const minimize = document.getElementById("minimize")
+const maximize = document.getElementById("maximize")
+const close = document.getElementById("close")
 
-document.getElementById("minimize").addEventListener("click", () => {
+minimize.addEventListener("click", () => {
   ipcRenderer.send("minimize-app");
-  
 });
 
-document.getElementById("maximize").addEventListener("click", () => {
+maximize.addEventListener("click", () => {
   ipcRenderer.send("maximize-app");
 });
 
-document.getElementById("close").addEventListener("click", async () => {
+close.addEventListener("click", async () => {
   ipcRenderer.send("close-app");
 });
 

@@ -39,8 +39,58 @@ body *{
     padding: 5px;
     background: none;
     -webkit-app-region: none;
-
 }
+
+.windowControls img {
+    height: 12pt;
+}
+
+#close:hover img {
+    content: url("../img/windowControls/close-hover.svg");
+    transform: scale(120%);
+}
+
+#close:not(:hover) img {
+    content: url("../img/windowControls/close-normal.svg");
+}
+
+#close:active img {
+    content: url("../img/windowControls/close-press.svg");
+    transform: scale(95%);
+}
+
+
+#minimize:hover img {
+    content: url("../img/windowControls/min-hover.svg");
+    transform: scale(120%);
+}
+
+#minimize:not(:hover) img {
+    content: url("../img/windowControls/min-normal.svg");
+}
+
+#minimize:active img {
+    content: url("../img/windowControls/min-press.svg");
+    transform: scale(95%);
+}
+
+
+#maximize:hover img {
+    content: url("../img/windowControls/max-hover.svg");
+    transform: scale(120%);
+}
+
+#maximize:not(:hover) img {
+    content: url("../img/windowControls/max-normal.svg");
+}
+
+#maximize:active img {
+    content: url("../img/windowControls/max-press.svg");
+    transform: scale(95%);
+}
+
+
+
 
 .titleBarStyle {
     background: #202327;
@@ -50,13 +100,9 @@ body *{
 
 .windowControlsStyle button {
     color: white;
-
 }
 
-.windowControlsStyle button:hover {
-    background: #48494c;
-    color: white;
-}
+
 
 .preventSelect {
     user-select: none;

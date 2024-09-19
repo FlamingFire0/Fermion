@@ -4,12 +4,13 @@
   "description": "A simple text editor / IDE",
   "main": "index.js",
   "scripts": {
-    "test": "electron ."
+    "dev": "electron ."
   },
   "author": "FlamingFire0 (Flamingo)",
   "license": "ISC",
   "dependencies": {
     "@electron/remote": "^2.1.2",
-    "electron": "^32.0.2"
+    "electron": "^32.0.2",
+    "resizable-panes-js": "^6.0.26"
   }
 }
